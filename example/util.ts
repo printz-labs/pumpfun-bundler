@@ -20,8 +20,8 @@ export function getOrCreateKeypair(dir: string, keyName: string): Keypair {
     } = JSON.parse(fs.readFileSync(authorityKey, "utf-8"));
     return Keypair.fromSecretKey(bs58.decode(data.secretKey));
   } else {
-    const keypair = Keypair.generate();
-    keypair.secretKey;
+    // const keypair = Keypair.generate();
+    // keypair.secretKey;
     fs.writeFileSync(
       authorityKey,
       JSON.stringify({
